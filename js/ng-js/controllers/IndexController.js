@@ -83,6 +83,10 @@
 
                     if (theme_name) {
                         for (var i = 0; i < $scope.themes.length; i++) {
+                            $scope.themes[i].selected = false;
+                        }
+                        
+                        for (var i = 0; i < $scope.themes.length; i++) {
                             if ($scope.themes[i].name == theme_name) {
                                 $scope.SetTheme($scope.themes[i]);
                                 break;
