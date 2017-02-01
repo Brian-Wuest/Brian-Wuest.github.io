@@ -9,7 +9,8 @@
                 templateUrl: "templates/d_and_d/quick_encounter.html"
             })
             .when("/experience_calculator", {
-                templateUrl: "templates/d_and_d/experience_calculator.html"
+                templateUrl: "templates/d_and_d/experience_calculator.html",
+                controller: "ExperienceCalculatorController"
             })
             .when("/minecraft_prefab", {
                 templateUrl: "templates/minecraft/prefab.html"

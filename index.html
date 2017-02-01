@@ -66,13 +66,13 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown" id="theme-dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 							<i class="fa fa-cog">
 							</i> Theme<b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu">
 							<li ng-repeat="theme in themes">
-								<a href="#" ng-click="ThemeClick(theme)" id="theme_{{theme.name}}">
+								<a ng-click="ThemeClick(theme)" id="theme_{{theme.name}}">
 									<i class="fa fa-check" aria-hidden="true" ng-show="theme.selected"></i>
 									<span ng-class="{dropdownPadding: !theme.selected}">{{theme.name}}</span>
 								</a>
@@ -97,6 +97,7 @@
 	<script src="./js/site.js"></script>
 	<script src="./js/ng-js/app.js"></script>
 	<script src="./js/ng-js/controllers/IndexController.js"></script>
+	<script src="./js/ng-js/controllers/ExperienceCalculatorController.js"></script>
 </body>
 
 </html>
