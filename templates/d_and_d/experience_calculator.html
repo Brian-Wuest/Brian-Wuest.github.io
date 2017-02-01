@@ -1,5 +1,17 @@
 <div class="row">
     <div class="col-xs-12">
+        <div class="row">
+            <form>
+                <div class="col-xs-12 form-group">
+                    <label class="col-xs-2 right-align-text">Experience System</label>
+                    <div class="col-xs-3">
+                        <select class="form-control">
+                            <option value="5thEdition" selected>D&amp;D 5th Edition</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div class="col-xs-4 col-xs-offset-1 well">
             <!--This is for the experience.-->
             <h2>Number of Monsters and Challenge Rating</h2>
@@ -7,13 +19,13 @@
             <form>
                 <div class="row form-group" ng-repeat="monster in currentMonsters">
                     <button class="col-xs-2 btn btn-default" ng-click="removeMonster(monster)">Remove</button>
-                    <span class="col-xs-3">Challenge Rating:</span>
+                    <label class="col-xs-3 right-align-text">Challenge Rating:</label>
                     <div class="col-xs-2">
                         <select class="form-control" ng-model="monster.MonsterInfo" ng-change="updatePlayersXP()" ng-options="cr.ChallengeRating for cr in monsterChallengeRatings">
                         </select>
                     </div>
-                    <span class="col-xs-2 col-xs-offset-1">Count: </span>
-
+                    
+                    <label class="col-xs-2 right-align-text">Count: </label>
                     <div class="col-xs-2">
                         <input class="form-control" type="number" min="0" max="100" ng-model="monster.MonsterCount" ng-change="updatePlayersXP()" />
                     </div>
@@ -28,22 +40,29 @@
 
         <div class="col-xs-4 col-xs-offset-1 well">
             <!--This is for the number of players and total experience.-->
-            <h2>Player count and calculated experience</h2>
+            <h2>Player Count and Calculated Experience</h2>
             <hr/>
             <form>
                 <div class="row form-group">
-                    <span class="col-xs-4">Player Count: </span>
-                    <input class="col-xs-2" type="number" min="0" max="100" step="1" ng-change="updatePlayersXP()" ng-model="playerCount" />
+                    <label class="col-xs-4">Player Count: </label>
+                    
+                    <div class="col-xs-3 ">
+                        <input class="form-control" type="number" min="0" max="100" step="1" ng-change="updatePlayersXP()" ng-model="playerCount" />
+                    </div>
                 </div>
 
                 <div class="row form-group">
-                    <span class="col-xs-4">Per-Player Experience: </span>
-                    <input class="col-xs-2" type="number" readonly ng-value="playerXp | number:0" />
+                    <label class="col-xs-4">Per-Player Experience: </label>
+                    <div class="col-xs-3">
+                        <input class="form-control" readonly ng-value="playerXp | number: 0" />
+                    </div>
                 </div>
 
                 <div class="row form-group">
-                    <span class="col-xs-4">Total Experience: </span>
-                    <input class="col-xs-2" type="number" readonly ng-value="playerXp * playerCount" />
+                    <label class="col-xs-4">Total Experience: </label>
+                    <div class="col-xs-3">
+                        <input class="form-control" readonly ng-value="playerXp * playerCount | number: 0" />
+                    </div>
                 </div>
             </form>
         </div>

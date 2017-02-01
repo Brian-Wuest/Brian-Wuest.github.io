@@ -10,7 +10,9 @@
             // The current monsters. This will be updated as the user adds/removes mosnters.
             $scope.currentMonsters = [];
             $scope.monsterChallengeRatings = appGlobals.dnd5thMonsterExperience;
-            $scope.playerCount = 0;
+
+            // 4 is the typical D&D player size.
+            $scope.playerCount = 4;
             $scope.playerXp = 0;
 
             $scope.removeMonster = function (Monster) {

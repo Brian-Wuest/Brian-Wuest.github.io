@@ -27,3 +27,11 @@ a {
 input[readonly] {
     background-color: darkgrey;
 }
+
+label {
+    padding-top: 8px;
+}
+
+.right-align-text {
+    text-align: right;
+}
