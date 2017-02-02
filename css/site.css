@@ -35,3 +35,8 @@ label {
 .right-align-text {
     text-align: right;
 }
+
+.right-left-padding-10 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
