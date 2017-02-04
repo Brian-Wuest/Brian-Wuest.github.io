@@ -22,6 +22,10 @@
                 title: "Minecraft Mod: WuestUtilities Showcase",
                 templateUrl: "templates/minecraft/wuest_utilities.html"
             })
+            .when("/about", {
+                title:"About",
+                templateUrl: "templates/misc/about.html"
+            })
             .otherwise({
                 title: "Home",
                 templateUrl: "templates/main.html"

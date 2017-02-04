@@ -17,8 +17,7 @@
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-					aria-expanded="false">
+				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 					<i class="fa fa-bars"></i>
 				</button>
 				<a class="navbar-brand" href="#">
@@ -66,17 +65,35 @@
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li class="button">
-						<a href="https://github.com/Brian-Wuest/Brian-Wuest.github.io/issues/new" target="_blank">
-							Report Issue <i class="fa fa-exclamation-circle"></i>
+					<li class="dropdown" id="theme-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-question fa-lg">
+							</i> Help<b class="caret"></b>
 						</a>
+						<ul class="dropdown-menu">
+							<li class="button">
+								<a href="https://github.com/Brian-Wuest/Brian-Wuest.github.io/issues/new" target="_blank">
+									<i class="fa fa-exclamation-circle fa-lg"></i> Report Issue
+								</a>
+							</li>
+							<li class="button">
+								<a href="https://github.com/Brian-Wuest/Brian-Wuest.github.io/wiki" target="_blank">
+									<i class="fa fa-wikipedia-w fa-lg"></i> Open Wiki
+								</a>
+							</li>
+							<li class="button">
+								<a ng-href="#about">
+									<i class="fa fa-info-circle fa-lg"></i> About
+								</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown" id="theme-dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-							<i class="fa fa-cog">
+							<i class="fa fa-cog fa-lg">
 							</i> Theme<b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu">
