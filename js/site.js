@@ -11,24 +11,38 @@ function supports_html5_storage() {
 appGlobals = new Object();
 
 // This is a prototype object for monster experience.
-function MonsterXP(ChallengeRating, Experience){
+function MonsterXP(ChallengeRating, Experience) {
     this.ChallengeRating = ChallengeRating;
     this.Experience = Experience;
 
-    this.Clone = function()
-    {
+    this.Clone = function () {
         var newMonster = new MonsterXP(this.ChallengeRating, this.Experience);
         return newMonster;
     }
 }
 
-appGlobals.generateGuid = function() {
+appGlobals.generateGuid = function () {
     function s4() {
         return Math.floor((1 + Math.random()) * 0x1000).toString(16).substring(1);
     }
 
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 };
+
+appGlobals.validateForm = function (formID) {
+    var form = document.getElementById(formID);
+    var test = true;
+
+    if (form) {
+        test = form.checkValidity();
+
+        if (!test) {
+            form.reportValidity();
+        }
+
+        return test;
+    }
+}
 
 // Create the challenge rating object.
 appGlobals.dnd5thMonsterExperience = [

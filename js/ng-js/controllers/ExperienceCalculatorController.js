@@ -33,12 +33,17 @@
                 // Add the template monster as the base.
                 $scope.currentMonsters.push({
                     MonsterID: appGlobals.generateGuid(),
-                    MonsterInfo: $scope.templateMonster.Clone(),
+                    MonsterInfo: $scope.templateMonster,
                     MonsterCount: 0
                 });
             };
 
-            $scope.updatePlayersXP = function () {
+            $scope.updatePlayersXP = function (formID) {
+                // Validate the changed form before continuing.
+                if (formID && !appGlobals.validateForm(formID)) {
+                    return;
+                }
+
                 // Calculate the amount of xp for these players and the number of monsters and their challenge rating.
                 if (!$scope.playerCount || $scope.playerCount === 0) {
                     $scope.playerXp = 0;
