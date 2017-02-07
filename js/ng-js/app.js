@@ -7,7 +7,8 @@
         $routeProvider
             .when("/quick_encounter", {
                 title: "RPG Tools: Quick Encounter",
-                templateUrl: "templates/d_and_d/quick_encounter.html"
+                templateUrl: "templates/d_and_d/quick_encounter.html",
+                controller: "QuickEncounterController"
             })
             .when("/experience_calculator", {
                 title: "RPG Tools: Experience Calculator",

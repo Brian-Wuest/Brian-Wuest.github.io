@@ -1,14 +1,15 @@
 // Contains global Javascript functions and variables
 
-function supports_html5_storage() {
+// This should be the only global variable on the scope.
+appGlobals = new Object();
+
+appGlobals.supports_html5_storage = function () {
     try {
         return 'localStorage' in window && window['localStorage'] !== null;
     } catch (e) {
         return false;
     }
-}
-
-appGlobals = new Object();
+};
 
 // This is a prototype object for monster experience.
 function MonsterXP(ChallengeRating, Experience) {
