@@ -3,8 +3,7 @@
     var MyApp = angular.module('MyApp')
 
     if (MyApp) {
-        MyApp.controller("QuickEncounterController", function ($scope) {
-        });
+        MyApp.controller("QuickEncounterController", function ($scope) {});
     }
 
 })();
