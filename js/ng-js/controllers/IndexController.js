@@ -94,6 +94,9 @@
                         }
                     }
                 }
+                else {
+                    $scope.SetTheme($scope.themes[0]);
+                }
             } else {
                 /* Don't annoy user with options that don't persist */
                 $('#theme-dropdown').hide();

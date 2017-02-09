@@ -7,8 +7,8 @@
         <div class="row">
             <form>
                 <div class="col-xs-12 form-group">
-                    <label class="col-xs-2 col-md-1 col-md-offset-1">Experience System</label>
-                    <div class="col-xs-3 col-md-3">
+                    <label class="col-xs-5 col-md-1 col-md-offset-1">Experience System</label>
+                    <div class="col-xs-7 col-sm-3 col-md-3">
                         <select class="form-control">
                             <option value="5thEdition" selected>D&amp;D 5th Edition</option>
                         </select>
@@ -57,24 +57,23 @@
             <hr/>
             <form name="playersForm" id="playersForm">
                 <div class="row form-group">
-                    <label class="col-xs-4">Player Count: </label>
-
-                    <div class="col-xs-3 ">
+                    <label class="col-xs-6 col-sm-6 col-md-4">Player Count: </label>
+                    <div class="col-xs-6 col-sm-6 col-md-4">
                         <input name="playerCount" class="form-control input-sm" type="number" min="0" max="100" step="1" ng-change="updatePlayersXP('playersForm')" ng-model="playerCount"
                         />
                     </div>
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-xs-4">Per-Player Experience: </label>
-                    <div class="col-xs-3">
+                    <label class="col-xs-6 col-sm-6 col-md-4">Per-Player Experience: </label>
+                    <div class="col-xs-6 col-sm-6 col-md-4">
                         <input class="form-control input-sm" readonly ng-value="playerXp | number: 0" />
                     </div>
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-xs-4">Total Experience: </label>
-                    <div class="col-xs-3">
+                    <label class="col-xs-6 col-sm-6 col-md-4">Total Experience: </label>
+                    <div class="col-xs-6 col-sm-6 col-md-4">
                         <input class="form-control input-sm" readonly ng-value="playerXp * playerCount | number: 0" />
                     </div>
                 </div>
