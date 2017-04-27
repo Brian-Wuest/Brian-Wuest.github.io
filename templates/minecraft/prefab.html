@@ -5,7 +5,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-md-6">
         <div uib-carousel active="0" interval="5000" no-wrap="false" style="height: 350px">
             <div uib-slide ng-repeat="slide in imageSlides track by slide.id" index="slide.id">
                 <img ng-src="{{getImageFileName(slide.file)}}" class="carousel-image" style="margin:auto;">
@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-4 col-xs-offset-1 panel panel-primary">
+    <div class="col-xs-12 col-md-4 col-md-offset-1 panel panel-primary">
         <div class="panel-heading">
             <h3>Mod Info</h2>
         </div>
