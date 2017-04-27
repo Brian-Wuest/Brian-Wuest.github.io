@@ -1,0 +1,14 @@
+{
+    "version": "0.1.0",
+    "configurations": [{
+            "name": "Launch localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3523/",
+            "webRoot": "${workspaceRoot}",
+            "userDataDir": "${workspaceRoot}/.vscode/chrome",
+            "port": 9222,
+            "sourceMaps": true
+        }
+    ]
+}

@@ -2,3 +2,5 @@ In order to run this in VS Code, use the command: "Express: Host Current Workspa
 This is accessed through the F1 menu in VS Code.
 
 Note: The Express extension is required in order to get this to work.
+
+In order to debug in chrome, start the express web server. From there just press F5 to launch the debugger.
