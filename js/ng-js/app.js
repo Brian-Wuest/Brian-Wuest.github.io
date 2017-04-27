@@ -20,10 +20,6 @@
                 templateUrl: "templates/minecraft/prefab.html",
                 controller: "PrefabController"
             })
-            .when("/minecraft_wuest_utilities", {
-                title: "Minecraft Mod: WuestUtilities Showcase",
-                templateUrl: "templates/minecraft/wuest_utilities.html"
-            })
             .when("/about", {
                 title:"About",
                 templateUrl: "templates/misc/about.html"
