@@ -1,7 +1,7 @@
 'use strict';
 (function(){
     // Define the `MyApp` module
-    var MyApp = angular.module('MyApp', ["ngRoute"]);
+    var MyApp = angular.module('MyApp', ["ngRoute", "ui.bootstrap"]);
 
     MyApp.config(function($routeProvider) {
         $routeProvider
@@ -17,7 +17,8 @@
             })
             .when("/minecraft_prefab", {
                 title: "Minecraft Mod: Prefab Showcase",
-                templateUrl: "templates/minecraft/prefab.html"
+                templateUrl: "templates/minecraft/prefab.html",
+                controller: "PrefabController"
             })
             .when("/minecraft_wuest_utilities", {
                 title: "Minecraft Mod: WuestUtilities Showcase",

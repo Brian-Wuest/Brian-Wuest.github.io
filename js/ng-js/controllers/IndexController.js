@@ -1,9 +1,28 @@
+/**
+ * @typedef {Object} Theme
+ * @property {string} name
+ * @property {string} href
+ * @property {string} integrity
+ * @property {boolean} selected
+ */
+
+/**
+ * @typedef {Object} Scope
+ * @property {string} contentLoaded
+ * @property {Theme[]} themes
+ * @property {function(Theme)} SetTheme
+ * @property {function(Theme)} ThemeClick
+ */
 (function () {
     // Get the application.
     var MyApp = angular.module('MyApp')
-
+    
     if (MyApp) {
-        MyApp.controller("IndexController", function ($scope) {
+        MyApp.controller("IndexController", 
+        /**
+         * @param  {Scope} $scope
+         */
+        function ($scope) {
             var supports_storage = appGlobals.supports_html5_storage();
             $scope.contentLoaded = false;
 

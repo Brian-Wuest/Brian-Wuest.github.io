@@ -5,7 +5,28 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-4 col-xs-offset-4 well">
-        This page is under construction
+    <div class="col-xs-6">
+        <div uib-carousel active="0" interval="5000" no-wrap="false" style="height: 350px">
+            <div uib-slide ng-repeat="slide in imageSlides track by slide.id" index="slide.id">
+                <img ng-src="{{getImageFileName(slide.file)}}" class="carousel-image" style="margin:auto;">
+                <div class="carousel-caption">
+                    <h3>{{slide.description}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-4 col-xs-offset-1 panel panel-primary">
+        <div class="panel-heading">
+            <h3>Mod Info</h2>
+        </div>
+        <div class="panel-body">
+            <h3>For Players:</h3>
+            <p>Information on all of the Blocks/Items and other bits and bobbles available in this mod can be found
+                <strong><a href="https://github.com/Brian-Wuest/MC-Prefab/wiki" target="_blank">here</a></strong>.</p>
+            <h3>For Modders:</h3>
+            <p>If you want to use this mod as a dependency for your own mod, code documentation can be found <strong><a href="./templates/minecraft/prefab_code_docs/index.html" target="_blank">here</a></strong>.</p>
+            <p>This is still a work in progress, documentation will be added as I find holes in the documentation but should
+                be still usable.</p>
+        </div>
     </div>
 </div>

@@ -81,3 +81,8 @@ label {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+
+.carousel-image {
+    max-height: 350px;
+    max-width: 800px;
+}
