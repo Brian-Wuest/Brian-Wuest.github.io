@@ -3,7 +3,7 @@
     var MyApp = angular.module('MyApp')
 
     if (MyApp) {
-        MyApp.controller("ExperienceCalculatorController", function ($scope) {
+        MyApp.registerCtrl("ExperienceCalculatorController", function ($scope) {
             // The template monster.
             $scope.templateMonster = appGlobals.dnd5thMonsterExperience[0];
 
