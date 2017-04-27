@@ -24,12 +24,7 @@
 
                     $.getScript('./js/ng-js/controllers/' + controllers[i] + '.js').then(function (response) {
                         numLoaded++;
-
-                        // Run the javascript code. This will register the controller.
-                        eval(response);
-
-                        var test = $controllerProvider.has(controllers[i]);
-
+                        
                         if (numLoaded == controllers.length) {
                             // Only return after all scripts are loaded, this is blocking, and will fail if all scripts aren't loaded.
                             return true;
