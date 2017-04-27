@@ -88,11 +88,9 @@ label {
     display: none !important;
 }
 
-@media (max-width: 991px) {
-    .carousel-image {
-        max-height: 350px;
-        max-width: 800px;
-    }
+.carousel-image {
+    max-height: 350px;
+    max-width: 800px;
 }
 
 @media (max-width: 560px) {

@@ -12,10 +12,18 @@ appGlobals.supports_html5_storage = function () {
 };
 
 // This is a prototype object for monster experience.
+/**
+ * This type is used to keep track of a challenge rating and it's associated experience amount. 
+ * @param {string} ChallengeRating 
+ * @param {number} Experience 
+ */
 function MonsterXP(ChallengeRating, Experience) {
     this.ChallengeRating = ChallengeRating;
     this.Experience = Experience;
 
+    /**
+     * Returns A new MonsterXP object with the same values as this one.
+     */
     this.Clone = function () {
         var newMonster = new MonsterXP(this.ChallengeRating, this.Experience);
         return newMonster;

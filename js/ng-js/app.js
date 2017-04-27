@@ -1,9 +1,11 @@
 'use strict';
-(function(){
+(function () {
     // Define the `MyApp` module
     var MyApp = angular.module('MyApp', ["ngRoute", "ui.bootstrap"]);
 
-    MyApp.config(function($routeProvider) {
+    MyApp.config(function ($routeProvider, $locationProvider) {
+        $locationProvider.hashPrefix('');
+
         $routeProvider
             .when("/quick_encounter", {
                 title: "RPG Tools: Quick Encounter",
@@ -21,7 +23,7 @@
                 controller: "PrefabController"
             })
             .when("/about", {
-                title:"About",
+                title: "About",
                 templateUrl: "templates/misc/about.html"
             })
             .otherwise({
@@ -30,8 +32,8 @@
             });
     });
 
-    MyApp.run(["$rootScope", "$route", function($rootScope, $route){
-        $rootScope.$on("$routeChangeSuccess", function() {
+    MyApp.run(["$rootScope", "$route", function ($rootScope, $route) {
+        $rootScope.$on("$routeChangeSuccess", function () {
             // When the route is successfully changed, pull the title property configired above and place it in the document title.
             document.title = $route.current.title + " | Brian-Wuest.github.io";
         });

@@ -4,10 +4,10 @@
 
     if (MyApp) {
         MyApp.controller("PrefabController", function ($scope, $http) {
-            $http.get('./templates/minecraft/prefab_images/imageList.json').success(function (files) {
-                $scope.imageSlides = files;
+            $http.get('./templates/minecraft/prefab_images/imageList.json').then(function (response) {
+                $scope.imageSlides = response.data;
                 console.log($scope);
-            }).error(function (response, data1, data2) {
+            }, function (response, data1, data2) {
                 $scope.error = response;
             });
 
