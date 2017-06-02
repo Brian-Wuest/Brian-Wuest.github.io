@@ -83,4 +83,9 @@ appGlobals.dnd5thMonsterExperience = [
     new MonsterXP("22", 41000),
     new MonsterXP("23", 50000),
     new MonsterXP("24", 62000),
+    new MonsterXP("25", 75000),
+    new MonsterXP("26", 90000),
+    new MonsterXP("27", 105000),
+    new MonsterXP("28", 120000),
+    new MonsterXP("29", 135000),
     new MonsterXP("30", 155000)];
