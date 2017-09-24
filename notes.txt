@@ -1,3 +1,0 @@
-This workspace was designed with Visual Studio Code and should be tested locally with the Express extension.
-
-Use Ctrl+Shift+P to open the command window and use "Express: Host current workspace and Open in Browser".
